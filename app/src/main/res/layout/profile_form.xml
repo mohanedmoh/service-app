@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/info_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents"
+
+    >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+        android:weightSum="8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:theme="@style/AppTheme"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/logo"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+        </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:theme="@style/Theme.MaterialComponents"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/handlee"
+                android:hint="@string/full_name"
+                android:inputType=""
+                android:singleLine="true"
+                android:textSize="13sp"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/handlee"
+                    android:text="@string/phone2"
+                    android:textSize="14sp"
+                    android:theme="@style/AppTheme" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryPicker"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="match_parent"
+                    app:ccpDialog_allowSearch="true"
+                    app:ccpDialog_backgroundColor="@color/white"
+                    app:ccpDialog_fastScroller_bubbleColor="@color/colorPrimaryDark"
+                    app:ccpDialog_fastScroller_handleColor="@color/colorPrimary"
+                    app:ccpDialog_initialScrollToSelection="true"
+                    app:ccpDialog_keyboardAutoPopup="false"
+                    app:ccpDialog_searchEditTextTint="@color/primary_text"
+                    app:ccpDialog_showCloseIcon="true"
+                    app:ccpDialog_showFastScroller="true"
+                    app:ccpDialog_showFlag="true"
+                    app:ccpDialog_showPhoneCode="true"
+                    app:ccpDialog_showTitle="false"
+                    app:ccpDialog_textColor="@color/primary_text"
+                    app:ccp_arrowColor="@color/primary_text"
+                    app:ccp_arrowSize="20dp"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_autoDetectLanguage="true"
+                    app:ccp_autoFormatNumber="true"
+                    app:ccp_clickable="true"
+                    app:ccp_contentColor="@color/colorPrimary"
+                    app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                    app:ccp_defaultLanguage="FRENCH"
+                    app:ccp_defaultNameCode="US"
+                    app:ccp_flagBorderColor="@color/colorPrimary"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccp_hintExampleNumberType="FIXED_LINE"
+                    app:ccp_rememberLastSelection="true"
+                    app:ccp_selectionMemoryTag="signupCCP"
+                    app:ccp_showArrow="true"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textGravity="RIGHT"
+                    app:ccp_textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/whatsapp_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@color/editText_background"
+                    android:fontFamily="@font/handlee"
+                    android:hint="@string/_9_123_456_78"
+                    android:inputType="phone"
+                    android:maxLength="9"
+
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:shadowColor="@color/primary_text"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="2">
+
+            <Spinner
+                android:theme="@style/AppTheme"
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight=".2"
+                android:fontFamily="@font/handlee"
+                android:hint="@string/gender"
+                android:inputType=""
+                android:singleLine="true"
+                android:textSize="14sp"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/birthdate_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/edit_birthdate"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:fontFamily="@font/handlee"
+                android:gravity="center"
+                android:text="@string/date_example"
+                android:textColor="@color/primary_text"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="2">
+
+            <Spinner
+                android:theme="@style/AppTheme"
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight=".2"
+                android:fontFamily="@font/handlee"
+                android:hint="@string/service"
+                android:inputType=""
+                android:singleLine="true"
+                android:textSize="14sp"
+
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:weightSum="2">
+
+                <Spinner
+                    android:theme="@style/AppTheme"
+                    android:id="@+id/sub_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight=".2"
+                    android:fontFamily="@font/handlee"
+                    android:hint="@string/sub_service"
+                    android:inputType=""
+                    android:singleLine="true"
+                    android:textSize="14sp"
+
+                    app:met_baseColor="@color/primary_text"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="2">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/certificates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight=".2"
+                android:fontFamily="@font/handlee"
+                android:hint="@string/certificates"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:weightSum="2">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/ex_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".2"
+                    android:fontFamily="@font/handlee"
+                    android:hint="@string/ex_desc"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:met_baseColor="@color/primary_text"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:weightSum="2">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/year_ex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".2"
+                    android:fontFamily="@font/handlee"
+                    android:hint="@string/years_of_ex"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:met_baseColor="@color/primary_text"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:weightSum="2">
+
+                <Spinner
+                    android:theme="@style/AppTheme"
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight=".2"
+                    android:fontFamily="@font/handlee"
+                    android:hint="@string/city"
+                    android:inputType=""
+                    android:singleLine="true"
+                    android:textSize="14sp"
+
+                    app:met_baseColor="@color/primary_text"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:weightSum="2">
+
+            <Spinner
+                android:theme="@style/AppTheme"
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight=".2"
+                android:fontFamily="@font/handlee"
+                android:hint="@string/city"
+                android:inputType=""
+                android:singleLine="true"
+                android:textSize="14sp"
+
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:theme="@style/Theme.MaterialComponents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:weightSum="2">
+
+                <com.anurag.multiselectionspinner.MultiSpinner
+                    android:theme="@style/AppTheme"
+                    android:id="@+id/areas"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+</ScrollView>
